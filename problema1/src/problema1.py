@@ -1,4 +1,5 @@
 import ast
+import re
 
 def problema1(lista, inicio, final):
     # caso base: si inicio es mayor a final, la condición no existe
@@ -21,35 +22,35 @@ def problema1(lista, inicio, final):
         if result != "no existe i":
             return result
         return problema1(lista, mitad + 1, final)
+    
+#Auxiliares para leer y escribir archivos
+def leer_set(nombre_archivo):
+    with open(nombre_archivo, 'r', encoding='utf-8') as archivo:
+        contenido = archivo.read()
+    
+    patron = r'\[[^\]]*\]'
+    arrays_encontrados = re.findall(patron, contenido)
+    
+    lista_arrays = [ast.literal_eval(arr) for arr in arrays_encontrados]
+    return lista_arrays
+
+def escribir_resultados_set(resultados, nombre_archivo):
+    with open(nombre_archivo, 'w', encoding='utf-8') as archivo:
+        for array in resultados:
+            archivo.write(f"Resultado: {array}\n")
+    return True
 
 if __name__ == "__main__":
     input_path = "problema1/pruebas/set_de_datos.txt"
     output_path = "problema1/pruebas/resultados_set_de_Datos.txt"
-    
-    with open(input_path, "r") as f:
-        lines = f.readlines()
-    
-    data_str = ""
-    for line in lines:
-        stripped = line.strip()
-        if not stripped.startswith("#"):
-            data_str += stripped + " "
-            
-    array_strs = data_str.split(";")
-    
-    results = []
-    for array_str in array_strs:
-        array_str = array_str.strip()
-        if array_str:
-            try:
-                arr = ast.literal_eval(array_str)
-                resultado = problema1(arr, 0, len(arr) - 1)
-                results.append(f"{arr} -> {resultado}")
-            except Exception as e:
-                results.append(f"Error en array '{array_str}': {e}")
-    
-    with open(output_path, "w") as f:
-        for line in results:
-            f.write(line + "\n")
+
+    lista_arrays = leer_set(input_path)
+
+    resultados=[]
+    for array in lista_arrays:
+            resultados += [problema1(array, 0, len(array) - 1)]
+
+    escribir_resultados_set(resultados, output_path)
+
     
     print("Procesamiento completado. Revisar el archivo de resultados.")
