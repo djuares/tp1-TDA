@@ -51,8 +51,8 @@ def graficar_tiempos(lista_arrays, tiempos):
     plt.xlabel('Tamaño del array (N)')
     plt.ylabel('Tiempo de ejecución (segundos)')
     plt.title('Tiempos de ejecución - set de datos problema 1')
-    plt.xscale('log')
-    plt.yscale('log')
+    plt.xscale('log')    
+    plt.ylim(bottom=1e-7)  # evita problemas con valores cercanos a 0
     plt.grid(True, which="both", ls="--", alpha=0.5)
 
     # anotar cada punto con su tiempo

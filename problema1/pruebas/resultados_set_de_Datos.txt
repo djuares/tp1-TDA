@@ -1,7 +1,60 @@
 Resultado: 0
+Resultado: 2
+Resultado: 3
+Resultado: 4
 Resultado: no existe i
-Resultado: 5
-Resultado: no existe i
-Resultado: 13
 Resultado: no existe i
 Resultado: 0
+Resultado: 4
+Resultado: 3
+Resultado: 8
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 1
+Resultado: 6
+Resultado: 5
+Resultado: 9
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 2
+Resultado: 10
+Resultado: 9
+Resultado: 12
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 19
+Resultado: 11
+Resultado: 20
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 15
+Resultado: 14
+Resultado: 25
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 50
+Resultado: 25
+Resultado: 99
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 100
+Resultado: 50
+Resultado: 199
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 250
+Resultado: 186
+Resultado: 499
+Resultado: no existe i
+Resultado: no existe i
+Resultado: 0
+Resultado: 500
+Resultado: 250
+Resultado: 999
+Resultado: no existe i
+Resultado: no existe i
