@@ -12,6 +12,8 @@ def problema1(lista, inicio, final):
     
     if lista[mitad] == mitad:
         return mitad
+    elif lista[-mitad] == -mitad:
+        return -mitad
     
     if lista[mitad] > mitad:
         result = problema1(lista, inicio, mitad - 1)

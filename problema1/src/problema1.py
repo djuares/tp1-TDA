@@ -10,15 +10,17 @@ def problema1(lista, inicio, final):
     
     if lista[mitad] == mitad:
         return mitad
+    elif lista[-mitad] == -mitad:
+        return -mitad
     
     if lista[mitad] > mitad:
         result = problema1(lista, inicio, mitad - 1)
         if result != "no existe i":
             return result
-        return problema1(lista, lista[mitad] + 1, final)
+        return problema1(lista, mitad + 1, final)
     
     else:
-        result = problema1(lista, inicio, mitad - 1)
+        result = problema1(lista, inicio,mitad - 1)
         if result != "no existe i":
             return result
         return problema1(lista, mitad + 1, final)
