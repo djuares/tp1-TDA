@@ -1,6 +1,6 @@
 def subsequence_max_dynamic_programming(arr):
     if not arr:  # Manejar array vacío
-        return 0, -1, -1
+        return 0, 0, 0
 
     # Inicialización con el primer elemento
     max_sum = arr[0]
