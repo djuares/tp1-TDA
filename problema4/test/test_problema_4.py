@@ -108,3 +108,65 @@ class TestSubsequenceMaxDynamicProgramming(unittest.TestCase):
         # Assert
         self.assertEqual(max_sum, expected_max_sum)
         self.assertEqual(subarray_result, expected_subarray_result)
+
+class TestSetDeDatosInforme(unittest.TestCase):
+
+    def test_case_general(self):
+        """Prueba con un caso general mixto de positivos, negativos y ceros."""
+        # Arrange
+        array = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+        expected_max_sum = 6
+        expected_subarray_result = [4, -1, 2, 1]
+
+        # Act
+        max_sum, start, end = subsequence_max_dynamic_programming(array)
+        subarray_result = array[start:end + 1]
+
+        # Assert
+        self.assertEqual(max_sum, expected_max_sum)
+        self.assertEqual(subarray_result, expected_subarray_result)
+
+    def test_all_positives(self):
+        """Prueba con un array de todos positivos: debe seleccionar toda la secuencia."""
+        # Arrange
+        array = [1, 2, 3, 4]
+        expected_max_sum = 10
+        expected_subarray_result = [1, 2, 3, 4]
+
+        # Act
+        max_sum, start, end = subsequence_max_dynamic_programming(array)
+        subarray_result = array[start:end + 1]
+
+        # Assert
+        self.assertEqual(max_sum, expected_max_sum)
+        self.assertEqual(subarray_result, expected_subarray_result)
+
+    def test_all_negatives(self):
+        """Prueba con un array de todos negativos: debe seleccionar el mayor (menos negativo)."""
+        # Arrange
+        array = [-5, -1, -3]
+        expected_max_sum = -1
+        expected_subarray_result = [-1]
+
+        # Act
+        max_sum, start, end = subsequence_max_dynamic_programming(array)
+        subarray_result = array[start:end + 1]
+
+        # Assert
+        self.assertEqual(max_sum, expected_max_sum)
+        self.assertEqual(subarray_result, expected_subarray_result)
+
+    def test_sandwich_case(self):
+        """Prueba con un caso 'sándwich' donde la suma máxima está en el medio."""
+        # Arrange
+        array = [-10, 4, 2, -5, 8, -20]
+        expected_max_sum = 9
+        expected_subarray_result = [4, 2, -5, 8]
+
+        # Act
+        max_sum, start, end = subsequence_max_dynamic_programming(array)
+        subarray_result = array[start:end + 1]
+
+        # Assert
+        self.assertEqual(max_sum, expected_max_sum)
+        self.assertEqual(subarray_result, expected_subarray_result)
