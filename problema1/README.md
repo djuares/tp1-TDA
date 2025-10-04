@@ -7,3 +7,12 @@ La solucion planteada utiliza el set de datos generado (`pruebas/set_de_datos.tx
 
 # Requisitos 
 - Python 3.12.3
+
+# Bibliotecas externas
+
+## Generación de graficos
+- Numpy
+- Matplotlib 
+
+
+

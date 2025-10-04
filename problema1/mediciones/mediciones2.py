@@ -1,8 +1,6 @@
 import numpy as np
 import time
 import matplotlib.pyplot as plt
-import ast
-import re
 
 def problema1(lista, inicio, final):
     # caso base: si inicio es mayor a final, la condición no existe
