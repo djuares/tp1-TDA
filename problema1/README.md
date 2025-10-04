@@ -10,7 +10,7 @@ La solucion planteada utiliza el set de datos generado (`pruebas/set_de_datos.tx
 
 # Bibliotecas externas
 
-## Generación de graficos
+## Generación de gráficos
 - Numpy
 - Matplotlib 
 
