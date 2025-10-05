@@ -1,4 +1,5 @@
 import ast
+import os
 import re
 
 def problema1(lista, inicio, final):
@@ -43,8 +44,8 @@ def escribir_resultados_set(resultados, nombre_archivo):
     return True
 
 if __name__ == "__main__":
-    input_path = "problema1/pruebas/set_de_datos.txt"
-    output_path = "problema1/pruebas/resultados_set_de_Datos.txt"
+    input_path = os.path.join(os.path.dirname(__file__), "../pruebas/set_de_datos.txt")
+    output_path = os.path.join(os.path.dirname(__file__), "../pruebas/resultados_set_de_Datos.txt")
 
     lista_arrays = leer_set(input_path)
 
