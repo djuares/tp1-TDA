@@ -55,4 +55,4 @@ if __name__ == "__main__":
     escribir_resultados_set(resultados, output_path)
 
     
-    print("Procesamiento completado. Revisar el archivo de resultados.")
+    print("Procesamiento completado. Revisar el archivo de resultados en /pruebas.")
